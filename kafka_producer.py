@@ -12,7 +12,7 @@ def load_env_vars(file_path):
     with open(file_path, 'r') as f:
         return json.load(f)
 
-env_vars = load_env_vars('varsha@MVARSHA:~/Downloads/testing/env.json')
+env_vars = load_env_vars('env.json')
 
 KAFKA_BROKER = os.getenv('KAFKA_BROKER', env_vars.get('KAFKA_BROKER'))
 KAFKA_TOPIC = os.getenv('KAFKA_TOPIC', env_vars.get('KAFKA_TOPIC'))
