@@ -1,0 +1,23 @@
+[
+  {
+    "env_name": "KAFKA_BROKER",
+    "variable_type": "String",
+    "mandatory": false,
+    "default_value": "localhost:9092",
+    "about_variable": "Kafka broker address used to connect to the cluster. Defaults to 'localhost:9092' if not set."
+  },
+  {
+    "env_name": "KAFKA_TOPIC",
+    "variable_type": "Output Topic",
+    "mandatory": false,
+    "default_value": "truck_telematics",
+    "about_variable": "Kafka topic to which generated telematics data is produced. Defaults to 'truck_telematics' if not set."
+  },
+  {
+    "env_name": "INTERVAL_SECONDS",
+    "variable_type": "Integer",
+    "mandatory": false,
+    "default_value": 1,
+    "about_variable": "Interval in seconds between consecutive message productions. Defaults to 1 second if not set."
+  }
+]

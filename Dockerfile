@@ -5,6 +5,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY producer.py .
+COPY config.json .
 
-CMD ["python", "telematics_producer.py"]
+ENV KAFKA_BROKER="localhost:9092"
+ENV KAFKA_TOPIC="truck_telematics"
+ENV INTERVAL_SECONDS="1"
+
+CMD ["python", "producer.py"]
